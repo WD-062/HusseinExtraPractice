@@ -29,3 +29,22 @@ console.log(hero[3][3][2]);
 
 let myArray = [42, 'Hello Worled', 'true', 3.14,'Javascript' ]
 console.log(myArray)
+
+hero.splice(0,2,'hussein', 'ahmed');
+console.log(hero)
+
+
+//DOM training
+document.getElementById('welt');
+console.log(document.getElementById('welt'))
+
+let welt = document.getElementById('welt');
+
+welt.innerHTML = 'Hello world ';
+console.log(  welt  )
+
+let student = ['ahmed','hussein','mark','dany','daly']
+console.log(student.indexOf('hussein',1))
+
+// console.log(student.lastindexOf('hussein',1))
+
