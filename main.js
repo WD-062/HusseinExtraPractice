@@ -168,11 +168,18 @@ const inventors = [
 // Array.prototype.filter()
 // 1. Filter the list of inventors to retrieve only those born between 1500 and 1600
 // Expected output: an array containing two inventors: Galileo Galilei and Johannes Kepler
+const bornIn1500s = inventors.filter(function (inventor) {
+    return inventor.year >= 1500 && inventor.year < 1600;
+});
+console.log(bornIn1500s);
 
 // Array.prototype.filter()
 // 2. Filter the list of inventors to retrieve only the ones that have the "mathematician" category
 // Expected output: an array containing only one inventor: Isaac Newton
-
+const mathematicians = inventors.filter(function (inventor) {
+    return inventor.categories && inventor.categories.includes('mathematician');
+})
+console.log(mathematicians)
 // Array.prototype.filter()
 // 3. Filter the list of inventors to retrieve only the ones with the category === 'physicist' AND 'man'
 // Expected output: an array containing only one inventor: Albert Einstein
