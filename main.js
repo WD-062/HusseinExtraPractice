@@ -183,18 +183,30 @@ console.log(mathematicians)
 // Array.prototype.filter()
 // 3. Filter the list of inventors to retrieve only the ones with the category === 'physicist' AND 'man'
 // Expected output: an array containing only one inventor: Albert Einstein
-
+const physicistman = inventors.filter(function (inventor) {
+    return inventor.categories && inventor.categories.includes('physicist');
+})
+console.log(physicistman);
 // Array.prototype.map()
 // 4. Give us an array filled with the inventors first and last names
 // Expected output:
 // ["Albert Einstein", "Isaac Newton", "Galileo Galilei", "Marie Curie", "Johannes Kepler", "Nicolaus Copernicus", "Max Planck", "Katherine Blodgett", "Ada Lovelace", "Sarah E. Goode", …]
-
+const fullNames = inventors.map(function (inventor) {
+    return `${inventor.first} ${inventor.last}`;
+});
+console.log(fullNames);
 // Array.prototype.map()
 // 5. Give us an array filled only with the inventors emails
 // the emails should be lowercase firstName + date of birth @ inventor.com
 // Expected output:
 // eg: ["albert1879@inventor.com", "isaac1643@inventor.com", "galileo1564@inventor.com", "marie1867@inventor.com", "johannes1571@inventor.com", "nicolaus1473@inventor.com", "max1858@inventor.com", "katherine1898@inventor.com", "ada1815@inventor.com", "sarah e.1855@inventor.com", …]
-
+const emails = inventors.map(function (inventor) {
+    const firstName = inventorer.first.tolowercase();
+    const year = inventor.year;
+    return `${inventor.first.tolowercase()}${inventor.year}@inventor.com`;
+});
+console.log(emails);
+    
 // Array.prototype.toSorted()
 // 6. Sort the inventors by birthdate, youngest to oldest (eg: the one whose birth year is closer to us on top)
 // Expected output: an array of inventors going from "Katherine Blodgett" -> to "Nicolaus Copernicus"
